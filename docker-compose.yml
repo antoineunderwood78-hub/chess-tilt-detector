@@ -1,0 +1,7 @@
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+    # Keep the container running
+    command: tail -f /dev/null
