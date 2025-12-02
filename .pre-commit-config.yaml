@@ -1,0 +1,21 @@
+#fichier lu avant git commit
+repos:
+  # Hooks de base (Maintenance)
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0               # version figée pour que tout le monde ait le même comportement
+    hooks:
+      - id: trailing-whitespace   # supprime les espaces inutiles en fin de ligne
+      - id: end-of-file-fixer     # ajoute une ligne vide à la fin du fichier (standard Linux/Git)
+      - id: check-yaml            # vérifie que la syntaxe des fichiers .yaml est valide
+
+  # Formatage du code (Black)
+  - repo: https://github.com/psf/black
+    rev: 23.3.0
+    hooks:
+      - id: black                # reformate le code Python automatiquement (respecte pyproject.toml)
+
+  # Tri des imports (Isort)
+  - repo: https://github.com/pycqa/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort                 # trie les imports alphabétiquement (respecte pyproject.toml)

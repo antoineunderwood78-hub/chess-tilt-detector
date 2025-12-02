@@ -1,0 +1,11 @@
+[tool.black]
+line-length = 88              # longueur maximale d'une ligne avant retour auto
+target-version = ['py39']     # code compatible Python 3.9
+
+[tool.isort]
+profile = "black"             # force isort à respecter le style de black
+
+[tool.mypy]
+python_version = "3.9"          # code compatible Python 3.9
+ignore_missing_imports = true   # ignore les erreurs si une lib externe n'a pas de types
+strict_optional = true          # force la gestion explicite des valeurs None (évite les bugs)
