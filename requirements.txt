@@ -11,3 +11,5 @@ black        # formateur de code
 isort        # trier les imports alphabétiquement
 mypy         # vérifier les types statiques
 pre-commit   # orchestrateur qui lance tout avant git commit
+streamlit
+plotly

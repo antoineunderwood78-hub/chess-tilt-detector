@@ -3,5 +3,7 @@ services:
     build: .
     volumes:
       - .:/app
+    ports:
+      - "8501:8501"
     # Keep the container running
     command: tail -f /dev/null
