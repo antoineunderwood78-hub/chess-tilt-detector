@@ -23,5 +23,5 @@ Ce projet vise à analyser les moments de "craquage" dans les parties d'échecs 
     ```
 3.  Lancer le script de récupération :
     ```bash
-    docker compose run app python src/fetch_data.py
+    docker compose exec app python -m src.fetch_data
     ```
