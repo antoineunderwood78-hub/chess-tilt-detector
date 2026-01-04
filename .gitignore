@@ -40,3 +40,4 @@ ENV/
 *.zst
 *.txt
 src/test_tilt.py
+data/
