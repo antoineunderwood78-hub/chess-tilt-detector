@@ -31,7 +31,7 @@ def analyze_game_for_tilt(game, player_color):
     prev_eval = 0  # Start at 0 cp
     is_white_turn = True  # White starts
 
-    while node.next():
+    while node and node.next():
         next_node = node.next()
 
         # Parse comment for eval and clock
@@ -148,7 +148,7 @@ def analyze_game_for_tilt(game, player_color):
                                 # next_node is currently pointing to the last move of the sequence (temp_node).
                                 # We need to parse it if we haven't already.
                                 seq_end_eval = None
-                                if temp_node.comment:
+                                if temp_node and temp_node.comment:
                                     seq_end_data = parse_comment(temp_node.comment)
                                     seq_end_eval = seq_end_data.get("eval")
 
@@ -176,7 +176,7 @@ def analyze_game_for_tilt(game, player_color):
 
                                 # Fast-forward to avoid overlapping tilts
                                 next_node = temp_node
-                                if next_node.comment:
+                                if next_node and next_node.comment:
                                     end_data = parse_comment(next_node.comment)
                                     if end_data.get("eval") is not None:
                                         current_eval = end_data.get("eval")
