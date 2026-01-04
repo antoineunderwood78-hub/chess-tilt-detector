@@ -38,3 +38,5 @@ ENV/
 # Project specific
 *.pgn
 *.zst
+*.txt
+src/test_tilt.py
